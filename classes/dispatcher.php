@@ -131,7 +131,7 @@ Class Dispatcher Implements Dispatcher_Dispatchable
 		{
 			foreach($this->listeners[$event_name] as $callback)
 			{
-				if(call_user_func($callback, $event_name, $event) AND $halt_on_success)
+				if(call_user_func($callback, $event) AND $halt_on_success)
 				{
 					break;
 				}
